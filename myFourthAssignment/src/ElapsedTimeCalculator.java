@@ -43,8 +43,9 @@ public class ElapsedTimeCalculator {
     // getting the elapsed time in hours (fix this part to get only the hours, convert both times to minutes)
     public int getelapsedTime()
     {
-        int elapsedTime = endTime - startTime; 
-        return elapsedTime;
+        int elapsedTime = (endTime*60) - (startTime*60); 
+        int elapsedTimeHours = elapsedTime/60;
+        return elapsedTimeHours;
     }
 
 }
