@@ -1,9 +1,11 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author arelysalvarezpadilla
@@ -15,20 +17,42 @@ public class ElapsedTimeCalculatorTest {
      */
     public static void main(String[] args) {
 
-        //creating The Eapsed time calculator     
-        ElapsedTimeCalculator myCalculator = new ElapsedTimeCalculator(1445, 1730);
+        //datas
+        int startTime;
+        int endTime;
+        String input;
 
-        //gettin the times
-        int startTime = myCalculator.getstartTime();
-        int endTime = myCalculator.getendTime();
-        
+        //gettin the times from the user
+        input = JOptionPane.showInputDialog("Enter the starting time");
+
+        startTime = Integer.parseInt(input);
+
+        input = JOptionPane.showInputDialog("Enter the ending time");
+
+        endTime = Integer.parseInt(input);
+
+        //creating the elapsed time calculator     
+        ElapsedTimeCalculator myCalculator = new ElapsedTimeCalculator(startTime, endTime);
+
+        //converting the times to minutes
+        myCalculator.convertToMinutes();
+
+        //printin the times
         System.out.println("The start time is " + startTime);
+
         System.out.println("\nThe end time is " + endTime);
-       
-        //calculatin the elapsed time 
-        int elapsedTime = myCalculator.getelapsedTime();
-        
-        System.out.println("\nThe elpased time in hours is " + elapsedTime);
+
+        //calculating the elapsed time 
+        System.out.println("\nExactly " + myCalculator.getelapsedTimeHour() + " hour(s) and "
+                + myCalculator.getelapsedTimeMin() + " minute(s) have passed");
+
+        //System.out.println("\nThe hour portion of the elapsed time is " + myCalculator.getelapsedTimeHour());
+        //System.out.println("\nThe minutes portion of the elpased time is " + myCalculator.getelapsedTimeMin());
+        System.out.println("\nThe total elapsed time in minutes is " + myCalculator.getelapsedTimeMinT());
+
+        System.out.println("\nThe total elapsed time in hours is " + myCalculator.getelapsedTimeHourT());
+
+        System.exit(0);
     }
 
 }
