@@ -63,9 +63,9 @@ public class ElapsedTimeCalculator {
     
     
     //reseting the start and end times
-    public void reset(int startTimeM1, int endTimeM1) {
-        startTime = startTimeM1;
-        endTime = endTimeM1;
+    public void reset(int startTimeM, int endTimeM) {
+        startTime = startTimeM;
+        endTime = endTimeM;
     }
 
 }

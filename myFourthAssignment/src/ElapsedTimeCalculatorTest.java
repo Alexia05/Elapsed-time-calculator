@@ -55,6 +55,28 @@ public class ElapsedTimeCalculatorTest {
         //resetting the start and end time
         myCalculator.reset(startTime, endTime);
         
+        input = JOptionPane.showInputDialog("Enter the new starting time");
+
+        startTime = Integer.parseInt(input);
+
+        input = JOptionPane.showInputDialog("Enter the new ending time");
+
+        endTime = Integer.parseInt(input);
+        
+        System.out.println("\n---------------------------------------------");
+        
+        System.out.println("\nThe new start time is " + startTime);
+
+        System.out.println("\nThe new end time is " + endTime);
+        
+        System.out.println("\nExactly " + myCalculator.getelapsedTimeHour() + " hour(s) and "
+                + myCalculator.getelapsedTimeMin() + " minute(s) have passed");
+         
+        System.out.println("\nThe total elapsed time in minutes is " + myCalculator.getelapsedTimeMinT());
+
+        System.out.println("\nThe total elapsed time in hours is " + myCalculator.getelapsedTimeHourT());
+        
+        
         System.exit(0);
     }
 
