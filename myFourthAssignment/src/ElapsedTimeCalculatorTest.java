@@ -52,6 +52,9 @@ public class ElapsedTimeCalculatorTest {
 
         System.out.println("\nThe total elapsed time in hours is " + myCalculator.getelapsedTimeHourT());
 
+        //resetting the start and end time
+        myCalculator.reset(startTime, endTime);
+        
         System.exit(0);
     }
 
