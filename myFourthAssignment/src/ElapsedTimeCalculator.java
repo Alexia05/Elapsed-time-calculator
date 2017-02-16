@@ -53,19 +53,17 @@ public class ElapsedTimeCalculator {
         int elapsedTime = endTimeInMinutes - startTimeInMinutes;
         return elapsedTime;
     }
-    
+
     //getting the total elapsed time in hours 
     public double getelapsedTimeHourT() {
         double elapsedTime = endTimeInMinutes - startTimeInMinutes;
-        return  elapsedTime/60;
-    }
-    
-    
-    //reseting the start and end times
-    public void anotherTime(int startTimeM, int endTimeM) {
-        startTimeInMinutes = startTimeM;
-        endTimeInMinutes = endTimeM;
+        return elapsedTime / 60;
     }
 
-    
+    //reseting the start and end times
+    public void anotherTime(int startTimeM, int endTimeM) {
+        startTime = startTimeM;
+        endTime = endTimeM;
+    }
+
 }

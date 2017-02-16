@@ -31,31 +31,31 @@ public class ElapsedTimeCalculatorTest {
 
         endTime = Integer.parseInt(input);
 
+        
         //creating the elapsed time calculator     
         ElapsedTimeCalculator myCalculator = new ElapsedTimeCalculator(startTime, endTime);
-
+        
+        
         //converting the times to minutes
         myCalculator.convertToMinutes();
-
+        
+        
         //printin the times
         System.out.println("The start time is " + startTime);
 
         System.out.println("\nThe end time is " + endTime);
 
-        //calculating the elapsed time 
+        
+        //printing the calculated elapsed time 
         System.out.println("\nExactly " + myCalculator.getelapsedTimeHour() + " hour(s) and "
                 + myCalculator.getelapsedTimeMin() + " minute(s) have passed");
 
-        //System.out.println("\nThe hour portion of the elapsed time is " + myCalculator.getelapsedTimeHour());
-        //System.out.println("\nThe minutes portion of the elpased time is " + myCalculator.getelapsedTimeMin());
         System.out.println("\nThe total elapsed time in minutes is " + myCalculator.getelapsedTimeMinT());
 
         System.out.println("\nThe total elapsed time in hours is " + myCalculator.getelapsedTimeHourT());
+        
 
         //resetting the start and end time
-        myCalculator.anotherTime(startTime, endTime);
-        
-        
         input = JOptionPane.showInputDialog("Enter the new starting time");
 
         startTime = Integer.parseInt(input);
@@ -63,23 +63,31 @@ public class ElapsedTimeCalculatorTest {
         input = JOptionPane.showInputDialog("Enter the new ending time");
 
         endTime = Integer.parseInt(input);
-       
-        //printin the times
-        System.out.println("\n----------------------------------------");
-        System.out.println("The new start time is " + startTime);
+        
+
+        //changing the start and end time 
+        myCalculator.anotherTime(startTime, endTime);
+        
+        
+        //converting the times to minutes
+        myCalculator.convertToMinutes();
+
+
+        //printin the new times
+        System.out.println("\n-----------------------------------------------------");
+
+        System.out.println("\nThe new start time is " + startTime);
 
         System.out.println("\nThe new end time is " + endTime);
 
-        //calculating the elapsed time for the new time
+        //printing the calculated elapsed time for the new time
         System.out.println("\nExactly " + myCalculator.getelapsedTimeHour() + " hour(s) and "
                 + myCalculator.getelapsedTimeMin() + " minute(s) have passed");
 
-        //System.out.println("\nThe hour portion of the elapsed time is " + myCalculator.getelapsedTimeHour());
-        //System.out.println("\nThe minutes portion of the elpased time is " + myCalculator.getelapsedTimeMin());
         System.out.println("\nThe total elapsed time in minutes is " + myCalculator.getelapsedTimeMinT());
 
         System.out.println("\nThe total elapsed time in hours is " + myCalculator.getelapsedTimeHourT());
-        
+
         System.exit(0);
     }
 
