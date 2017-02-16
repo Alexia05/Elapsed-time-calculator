@@ -34,7 +34,6 @@ public class ElapsedTimeCalculator {
     public void convertToMinutes() {
         this.startTimeInMinutes = (startTime / 100) * 60 + (startTime % 100);
         this.endTimeInMinutes = (endTime / 100) * 60 + (endTime % 100);
-
     }
 
     // getting the hours portion of the elapsed time 
@@ -63,9 +62,10 @@ public class ElapsedTimeCalculator {
     
     
     //reseting the start and end times
-    public void reset(int startTimeM, int endTimeM) {
-        startTime = startTimeM;
-        endTime = endTimeM;
+    public void anotherTime(int startTimeM, int endTimeM) {
+        startTimeInMinutes = startTimeM;
+        endTimeInMinutes = endTimeM;
     }
 
+    
 }
