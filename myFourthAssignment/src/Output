@@ -1,1 +1,24 @@
 
+run:
+The start time is 1445
+
+The end time is 1730
+
+Exactly 2 hour(s) and 45 minute(s) have passed
+
+The total elapsed time in minutes is 165
+
+The total elapsed time in hours is 2.75
+
+-----------------------------------------------------
+
+The new start time is 1234
+
+The new end time is 1811
+
+Exactly 5 hour(s) and 37 minute(s) have passed
+
+The total elapsed time in minutes is 337
+
+The total elapsed time in hours is 5.616666666666666
+BUILD SUCCESSFUL (total time: 17 seconds)
